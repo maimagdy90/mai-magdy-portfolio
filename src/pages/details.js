@@ -41,11 +41,11 @@ const BookPage = props => {
           <br />
           <h3>{book.frontmatter.author}</h3>
           <br />
-          {book.frontmatter.publisher && (
+          {book.frontmatter.publisher !== undefined ? (
             <h3>{`Publisher: ${book.frontmatter.publisher}`}</h3>
-          )}
+          ) : null}
           <br />
-          {book.frontmatter.publish_date && (
+          {book.frontmatter.publish_date !== undefined ? (
             <h3>
               {`Publish Date: ${new Intl.DateTimeFormat('en-US', {
                 year: 'numeric',
@@ -54,20 +54,21 @@ const BookPage = props => {
               }).format(new Date(Date.parse(book.frontmatter.publish_date)))}
               `}
             </h3>
-          )}
+          ) : null}
           <br />
-          {book.frontmatter.translator && (
+          {book.frontmatter.translator !== undefined ? (
             <h3>{`Translator: ${book.frontmatter.translator}`}</h3>
-          )}
-          {book.frontmatter.notes && (
+          ) : null}
+          <br />
+          {book.frontmatter.notes !== undefined ? (
             <h3>{`Notes: ${book.frontmatter.notes}`}</h3>
-          )}
+          ) : null}
         </DetailsWrapper>
         <GalleryWrapper>
           <ImgWrapper fluid={book.frontmatter.cover.childImageSharp.fluid} />
-          {book.frontmatter.mockup !== null && (
+          {book.frontmatter.mockup !== undefined ? (
             <ImgWrapper fluid={book.frontmatter.mockup.childImageSharp.fluid} />
-          )}
+          ) : null}
         </GalleryWrapper>
       </MainWrapper>
     </Layout>

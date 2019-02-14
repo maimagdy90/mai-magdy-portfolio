@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'react-emotion'
 import { FaFacebookF } from 'react-icons/fa'
 import { FaBehanceSquare } from 'react-icons/fa'
-import { FaInstagram } from 'react-icons/fa'
+// import { FaInstagram } from 'react-icons/fa'
 import { FaEnvelope } from 'react-icons/fa'
 
 const FooterWrapper = styled('div')`
@@ -64,14 +64,14 @@ const BehanceIcon = styled(FaBehanceSquare)`
     color: #1769ff;
   }
 `
-const InstagramIcon = styled(FaInstagram)`
-  margin: 8px;
-  cursor: pointer;
-  transition: all 0.3s;
-  &:hover {
-    color: #e1306c;
-  }
-`
+// const InstagramIcon = styled(FaInstagram)`
+//   margin: 8px;
+//   cursor: pointer;
+//   transition: all 0.3s;
+//   &:hover {
+//     color: #e1306c;
+//   }
+// `
 const EnvelopeIcon = styled(FaEnvelope)`
   margin: 8px;
   cursor: pointer;
@@ -93,9 +93,9 @@ const Footer = () => (
       <IconLink href="https://www.facebook.com/Mai-Magdy-Artworks-451317958250658/">
         <FacebookIcon size="30px" />
       </IconLink>
-      <IconLink>
+      {/* <IconLink>
         <InstagramIcon size="30px" />
-      </IconLink>
+      </IconLink> */}
       <IconLink href="http://www.behance.net/MaiMagdy">
         <BehanceIcon size="30px" />
       </IconLink>
