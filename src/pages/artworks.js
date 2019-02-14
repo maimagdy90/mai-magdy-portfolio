@@ -111,22 +111,10 @@ export const query = graphql`
           frontmatter {
             title
             author
-            translator
-            publisher
             publish_date
             notes
             featured
             cover {
-              childImageSharp {
-                fluid(maxWidth: 700) {
-                  srcSet
-                  sizes
-                  aspectRatio
-                  src
-                }
-              }
-            }
-            mockup {
               childImageSharp {
                 fluid(maxWidth: 700) {
                   srcSet
