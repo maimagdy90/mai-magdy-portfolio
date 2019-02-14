@@ -1,5 +1,4 @@
 import React from 'react'
-import { navigate } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import styled from 'react-emotion'
@@ -32,7 +31,6 @@ const ImgWrapper = styled(Img)`
 `
 
 const BookPage = props => {
-  if (!props.location.state) navigate('/404')
   const { location } = props
   const book = location.state.item
   return (
