@@ -36,7 +36,7 @@ const Layout = props => (
                 { name: 'description', content: 'Mai Magdy Portfolio' },
                 { name: 'keywords', content: 'graphic, design, portfolio' },
                 { name: 'url', content: '' },
-                { name: 'image', content: '../images/logo.png' },
+                { name: 'image', content: '../images/assets/logo.png' },
               ]}
             >
               <html lang="en" />
