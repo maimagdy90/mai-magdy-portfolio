@@ -1,44 +1,26 @@
 /* PROJECT */
 
-	Site Name:   Perishable Press
+	Site Name:   Mai Magdy Portfolio
 	Site URL:    https://perishablepress.com/
-	Created:     2005/01/01
-	Standards:   HTML5, CSS3
-	Components:  jQuery
-	Software:    WordPress
-	Plugins:     Akismet, XML Sitemaps, Broken Link Checker, et al
-	Web Design:  Jeff Starr @ Monzilla Media
+	Created:     2019/02/15
+	Standards:   HTML5, CSS3, Javascript
+	Software:    GatsbyJS
+	Web Design:  Mohamed Magdy
 
 /* AUTHOR */
 
-	Name:        Jeff Starr
-	Nickname:    Perishable
-	Title:       CEO, Monzilla Media & Perishable Press Books
-	Location:    Washington State
-	Site:        https://monzillamedia.com/
-	Site:        https://wp-tao.com/store/
-	Blog:        https://perishablepress.com/
-	Contact:     https://perishablepress.com/contact/
-	Donation:    https://m0n.co/donate
+	Name:        Mohamed Magdy
+	Nickname:    MM
+	Title:       Front-end developer
+	Location:    Cairo, Egypt	
+	Contact:     mohamed.magdy.abdelhamid@gmail.com
 
 /* SOCIAL */
 
-	About.me:    https://about.me/jeffstarr
-	WordPress:   https://profiles.wordpress.org/specialk/
-	Linkedin:    https://linkedin.com/in/perishable
-	Twitter:     https://twitter.com/perishable
-	Plugins:     https://plugin-planet.com/
-	Themes:      https://perishablepress.com/perishable-wordpress-themes/
-	Facebook:    https://www.facebook.com/jeff.m.starr
-	Google+:     https://plus.google.com/116997484632739778984/
-	Instagram:   https://www.instagram.com/perishable/
-	YouTube:     https://www.youtube.com/channel/UCU8j5aGOd8jhk-Hyj6ZF7gw
-	Tumblr:      http://perishable.tumblr.com/
+	Linkedin:    https://www.linkedin.com/in/mmagdy87/
+	Facebook:    https://www.facebook.com/m.magdy87
+	Twitter:     https://twitter.com/MMagdy87
 
 /* META */
 
-	Built with: WordPress, PHP, HTML, CSS, jQuery, JavaScript, SQL, .htaccess :)
-
-/* THANKS */
-
-	To everyone who shares, likes, comments, and contributes!
+	Built with: HTML, CSS, GatsbyJS, GraphQL
