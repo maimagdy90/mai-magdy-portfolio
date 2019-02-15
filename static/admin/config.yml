@@ -5,7 +5,7 @@ backend:
 # This line should *not* be indented
 publish_mode: editorial_workflow
 # This line should *not* be indented
-media_folder: 'images/'
+media_folder: 'images'
 
 collections:
   - name: 'books' # Used in routes, e.g., /admin/collections/blog
@@ -30,15 +30,9 @@ collections:
           widget: 'image',
           required: true,
         }
-      - { label: 'Mockup Image', name: 'thumbnail', widget: 'image' }
+      - { label: 'Mockup Image', name: 'mockup', widget: 'image' }
       - { label: 'Notes', name: 'notes', widget: 'text' }
-      - {
-          label: 'Type',
-          name: 'type',
-          widget: 'list',
-          required: true,
-          fields: ['book'],
-        }
+      - { label: 'Type', name: 'type', widget: 'hidden', default: 'book' }
       - {
           label: 'Featured',
           name: 'featured',
@@ -57,21 +51,10 @@ collections:
       - { label: 'Translator', name: 'translator', widget: 'string' }
       - { label: 'Publisher', name: 'publisher', widget: 'string' }
       - { label: 'Publish Date', name: 'publish_date', widget: 'datetime' }
-      - {
-          label: 'Cover Image',
-          name: 'thumbnail',
-          widget: 'image',
-          required: true,
-        }
-      - { label: 'Mockup Image', name: 'thumbnail', widget: 'image' }
+      - { label: 'Cover Image', name: 'cover', widget: 'image', required: true }
+      - { label: 'Mockup Image', name: 'mockup', widget: 'image' }
       - { label: 'Notes', name: 'notes', widget: 'text' }
-      - {
-          label: 'Type',
-          name: 'type',
-          widget: 'list',
-          required: true,
-          fields: ['art'],
-        }
+      - { label: 'Type', name: 'type', widget: 'hidden', default: 'art' }
       - {
           label: 'Featured',
           name: 'featured',
@@ -90,21 +73,10 @@ collections:
       - { label: 'Translator', name: 'translator', widget: 'string' }
       - { label: 'Publisher', name: 'publisher', widget: 'string' }
       - { label: 'Publish Date', name: 'publish_date', widget: 'datetime' }
-      - {
-          label: 'Cover Image',
-          name: 'thumbnail',
-          widget: 'image',
-          required: true,
-        }
-      - { label: 'Mockup Image', name: 'thumbnail', widget: 'image' }
+      - { label: 'Cover Image', name: 'cover', widget: 'image', required: true }
+      - { label: 'Mockup Image', name: 'mockup', widget: 'image' }
       - { label: 'Notes', name: 'notes', widget: 'text' }
-      - {
-          label: 'Type',
-          name: 'type',
-          widget: 'list',
-          required: true,
-          fields: ['campaign'],
-        }
+      - { label: 'Type', name: 'type', widget: 'hidden', default: 'campaign' }
       - {
           label: 'Featured',
           name: 'featured',
