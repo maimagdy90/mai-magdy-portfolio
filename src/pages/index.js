@@ -38,13 +38,13 @@ const ImgWrapper = styled(Img)`
 `
 const LinkWrapper = styled(Link)`
   position: relative;
+  height: 400px;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
-  height: 400px;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -131,7 +131,10 @@ export default IndexPage
 
 export const query = graphql`
   {
-    allMarkdownRemark(filter: { frontmatter: { featured: { eq: true } } }) {
+    allMarkdownRemark(
+      sort: { order: ASC, fields: [frontmatter___type] }
+      filter: { frontmatter: { featured: { eq: true } } }
+    ) {
       edges {
         node {
           id

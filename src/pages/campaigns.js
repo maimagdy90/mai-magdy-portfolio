@@ -5,6 +5,8 @@ import Layout from '../components/layout'
 import styled from 'react-emotion'
 import { Link } from '@reach/router'
 
+import './index.css'
+
 const ContentWrapper = styled('div')`
   margin: 16px;
   display: -ms-flexbox;
@@ -34,18 +36,20 @@ const ImgWrapper = styled(Img)`
   border-radius: 5px;
 `
 const LinkWrapper = styled(Link)`
+  position: relative;
+  height: 400px;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
-  height: 400px;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   transition: 0.3s;
   display: flex;
+  align-items: center;
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
     transform: scale(1.01);
@@ -63,14 +67,12 @@ const LinkWrapper = styled(Link)`
     margin: 12px 1.5%;
   }
   @media (min-width: 1024px) and (max-width: 1400px) {
-    width: 23%;
+    width: 30%;
     margin: 12px 1%;
-    height: 500px;
   }
   @media (min-width: 1400px) {
     width: 23%;
     margin: 12px 1%;
-    height: 500px;
   }
 `
 
@@ -89,8 +91,30 @@ const Campaigns = ({ data, location }) => {
                   item: item.node,
                 }}
               >
+                <div
+                  className="blur-image"
+                  style={{
+                    backgroundImage:
+                      item.node.frontmatter.type === 'work_art' ||
+                      item.node.frontmatter.type === 'campaign'
+                        ? `url(${
+                            item.node.frontmatter.cover.childImageSharp.fluid
+                              .src
+                          })`
+                        : '',
+                  }}
+                />
                 <ImgWrapper
                   fluid={item.node.frontmatter.cover.childImageSharp.fluid}
+                  className={
+                    item.node.frontmatter.type === 'work_art' ||
+                    item.node.frontmatter.type === 'campaign'
+                      ? 'cover'
+                      : ''
+                  }
+                  style={{
+                    maxHeight: 400,
+                  }}
                 />
               </LinkWrapper>
             ))
@@ -111,8 +135,12 @@ export const query = graphql`
           frontmatter {
             title
             author
+            translator
+            publisher
             publish_date
+            notes
             featured
+            type
             cover {
               childImageSharp {
                 fluid(maxWidth: 700) {
