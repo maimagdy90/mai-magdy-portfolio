@@ -90,13 +90,16 @@ const BreakLine = styled('br')`
 const Footer = () => (
   <FooterWrapper>
     <FooterCell>
-      <IconLink href="https://www.facebook.com/Mai-Magdy-Artworks-451317958250658/">
+      <IconLink
+        href="https://www.facebook.com/Mai-Magdy-Artworks-451317958250658/"
+        target="_blank"
+      >
         <FacebookIcon size="30px" />
       </IconLink>
       {/* <IconLink>
         <InstagramIcon size="30px" />
       </IconLink> */}
-      <IconLink href="http://www.behance.net/MaiMagdy">
+      <IconLink href="http://www.behance.net/MaiMagdy" target="_blank">
         <BehanceIcon size="30px" />
       </IconLink>
       <IconLink href="mailto:mai.magdy.hamid@gmail.com">

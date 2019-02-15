@@ -1,8 +1,6 @@
 ---
-title: 'About'
+title: 'About Me'
 type: 'about'
 ---
-
-# About Me
 
 I'm Mai Magdy...

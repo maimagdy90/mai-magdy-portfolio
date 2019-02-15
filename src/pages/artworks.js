@@ -104,7 +104,7 @@ export default Artwork
 
 export const query = graphql`
   {
-    allMarkdownRemark(filter: { frontmatter: { type: { eq: "art" } } }) {
+    allMarkdownRemark(filter: { frontmatter: { type: { eq: "work_art" } } }) {
       edges {
         node {
           id

@@ -27,11 +27,17 @@ const ContentWrapper = styled('div')`
   margin: auto;
 `
 
+const TitleWrapper = styled('h1')`
+  color: white;
+  width: 100%;
+`
+
 const Artwork = ({ data, location }) => {
   const { allMarkdownRemark: about } = data
   return (
     <Layout pathname={location.pathname}>
       <ContentWrapper>
+        <TitleWrapper>{about.edges[0].node.frontmatter.title}</TitleWrapper>
         <div dangerouslySetInnerHTML={{ __html: about.edges[0].node.html }} />
       </ContentWrapper>
     </Layout>
@@ -47,6 +53,9 @@ export const query = graphql`
         node {
           id
           html
+          frontmatter {
+            title
+          }
         }
       }
     }
