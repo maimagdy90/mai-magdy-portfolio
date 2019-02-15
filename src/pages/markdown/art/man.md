@@ -4,6 +4,6 @@ author: Mai Magdy
 publish_date: '5/12/2018'
 notes: رسمة جميلة
 type: art
-cover: '../../../images/man.jpg'
+cover: '/src/images/man.jpg'
 featured: true
 ---
