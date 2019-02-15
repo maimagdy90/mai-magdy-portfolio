@@ -48,8 +48,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'mai-magdy-artworks',
-        short_name: 'mai-magdy-artworks',
+        name: 'Mai Magdy Portfolio',
+        short_name: 'Mai Magdy Portfolio',
         start_url: '/',
         background_color: '#daa501',
         theme_color: '#daa501',
