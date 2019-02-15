@@ -74,7 +74,6 @@ const LinkWrapper = styled(Link)`
   @media (min-width: 1400px) {
     width: 23%;
     margin: 12px 1%;
-    height: 500px;
   }
 `
 // const shuffleArrayItems = arr => arr.sort(() => 0.5 - Math.random())

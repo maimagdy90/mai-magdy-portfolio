@@ -5,8 +5,8 @@ backend:
 # This line should *not* be indented
 publish_mode: editorial_workflow
 # This line should *not* be indented
-public_folder: /images
 media_folder: 'src/images'
+public_folder: /images
 
 collections:
   - name: 'books' # Used in routes, e.g., /admin/collections/blog
@@ -53,7 +53,7 @@ collections:
 
   - name: 'artworks' # Used in routes, e.g., /admin/collections/blog
     label: 'Artworks' # Used in the UI
-    folder: 'src/pages/markdown/art' # The path to the folder where the documents are stored
+    folder: 'src/pages/markdown/artwork' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{year}}-{{month}}-{{day}}_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
