@@ -34,9 +34,15 @@ const Layout = props => (
               title={data.site.siteMetadata.title}
               meta={[
                 { name: 'description', content: 'Mai Magdy Portfolio' },
-                { name: 'keywords', content: 'graphic, design, portfolio' },
+                {
+                  name: 'keywords',
+                  content: 'graphic, design, portfolio',
+                },
                 { name: 'url', content: '' },
-                { name: 'image', content: '../images/assets/logo.png' },
+                {
+                  name: 'image',
+                  content: '../../static/images/assets/logo.png',
+                },
               ]}
             >
               <html lang="en" />

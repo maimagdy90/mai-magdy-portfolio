@@ -6,7 +6,7 @@ publisher: دار الشروق
 publish_date: '5/12/2018'
 notes: الكتاب رائع
 type: book
-cover: '../../../images/katia-cover.jpg'
-mockup: '../../../images/katia-mockup.jpg'
+cover: '../../../../static/images/katia-cover.jpg'
+mockup: '../../../../static/images/katia-mockup.jpg'
 featured: true
 ---

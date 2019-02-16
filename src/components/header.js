@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'react-emotion'
 import { FaBars } from 'react-icons/fa'
-import logo from '../images/assets/logo.png'
+import logo from '../../static/images/assets/logo.png'
 
 const CollapsedNavWrapper = styled('div')`
   position: absolute;

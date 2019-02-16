@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static/images`,
       },
     },
     {
@@ -55,7 +55,7 @@ module.exports = {
         background_color: '#daa501',
         theme_color: '#daa501',
         display: 'minimal-ui',
-        icon: 'src/images/assets/manifest-logo.png', // This path is relative to the root of the site.
+        icon: 'static/images/assets/manifest-logo.png', // This path is relative to the root of the site.
       },
     },
     {

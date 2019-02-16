@@ -49,7 +49,10 @@ const HeroImage = () => (
         placeholderImage: file(relativePath: { eq: "assets/hero-image.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 2000) {
-              ...GatsbyImageSharpFluid
+              src
+              srcSet
+              sizes
+              aspectRatio
             }
           }
         }
