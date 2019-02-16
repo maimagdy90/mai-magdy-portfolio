@@ -1,7 +1,7 @@
 /* PROJECT */
 
 	Site Name:   Mai Magdy Portfolio
-	Site URL:    https://perishablepress.com/
+	Site URL:    
 	Created:     2019/02/15
 	Standards:   HTML5, CSS3, Javascript
 	Software:    GatsbyJS
