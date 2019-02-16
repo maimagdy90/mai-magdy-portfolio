@@ -1,5 +1,12 @@
 const config = require('./config/site')
 
+var netlifyCmsPaths = {
+  resolve: `gatsby-plugin-netlify-cms-paths`,
+  options: {
+    cmsConfig: `/static/admin/config.yml`,
+  },
+}
+
 module.exports = {
   siteMetadata: {
     ...config,
@@ -24,6 +31,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          netlifyCmsPaths,
           // gatsby-remark-relative-images must
           // go before gatsby-remark-images
           {
@@ -36,11 +44,13 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 700,
+              backgroundColor: 'transparent',
             },
           },
         ],
       },
     },
+    netlifyCmsPaths,
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     // 'gatsby-plugin-offline',
