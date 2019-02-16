@@ -1,12 +1,5 @@
 const config = require('./config/site')
 
-var netlifyCmsPaths = {
-  resolve: `gatsby-plugin-netlify-cms-paths`,
-  options: {
-    cmsConfig: `/static/admin/config.yml`,
-  },
-}
-
 module.exports = {
   siteMetadata: {
     ...config,
@@ -31,7 +24,6 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          netlifyCmsPaths,
           // gatsby-remark-relative-images must
           // go before gatsby-remark-images
           {
@@ -50,7 +42,6 @@ module.exports = {
         ],
       },
     },
-    netlifyCmsPaths,
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     // 'gatsby-plugin-offline',
