@@ -84,7 +84,7 @@ const IndexPage = ({ data, location }) => {
   return (
     <Layout pathname={location.pathname}>
       <HeroImage />
-      <ContentWrapper>
+      <ContentWrapper id="content-wrapper">
         {covers
           ? covers.edges.map(item => (
               <LinkWrapper

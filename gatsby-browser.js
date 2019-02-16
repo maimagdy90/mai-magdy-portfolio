@@ -6,6 +6,6 @@
 
 // You can delete this file if you're not using it
 
-exports.onServiceWorkerUpdateReady = () => {
-  console.log('Website has been updated.')
-}
+// exports.onServiceWorkerUpdateReady = () => {
+//   console.log('Website has been updated.')
+// }

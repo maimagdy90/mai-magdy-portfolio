@@ -9,6 +9,7 @@ const MainWrapper = styled('div')`
   display: flex;
   @media (max-width: 767px) {
     display: block;
+    padding: 3vh;
   }
 `
 const DetailsWrapper = styled('div')`
@@ -21,6 +22,7 @@ const GalleryWrapper = styled('div')`
   width: 60%;
   @media (max-width: 767px) {
     width: 100%;
+    margin-top: 5vh;
   }
 `
 
@@ -28,6 +30,21 @@ const ImgWrapper = styled(Img)`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   margin: 12px;
+`
+
+const Title = styled('h1')`
+  font-size: 4rem;
+  @media (max-width: 767px) {
+    font-size: 2rem;
+    margin-bottom: 2vh;
+  }
+`
+
+const Subtitle = styled('h3')`
+  @media (max-width: 767px) {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
 `
 
 const Details = props => {
@@ -38,35 +55,37 @@ const Details = props => {
       <Layout pathname={location.pathname}>
         <MainWrapper>
           <DetailsWrapper>
-            <h1 style={{ fontSize: '4rem' }}>{book.frontmatter.title}</h1>
+            <Title>{book.frontmatter.title}</Title>
             <br />
-            <h3>{book.frontmatter.author}</h3>
+            <Subtitle>{book.frontmatter.author}</Subtitle>
             <br />
             {book.frontmatter.publisher !== undefined &&
             book.frontmatter.publisher !== null ? (
-              <h3>{`Publisher: ${book.frontmatter.publisher}`}</h3>
+              <Subtitle>{`Publisher: ${book.frontmatter.publisher}`}</Subtitle>
             ) : null}
             <br />
             {book.frontmatter.publish_date !== undefined &&
             book.frontmatter.publish_date !== null ? (
-              <h3>
+              <Subtitle>
                 {`Publish Date: ${new Intl.DateTimeFormat('en-US', {
                   year: 'numeric',
                   month: 'short',
                   day: '2-digit',
                 }).format(new Date(Date.parse(book.frontmatter.publish_date)))}
               `}
-              </h3>
+              </Subtitle>
             ) : null}
             <br />
             {book.frontmatter.translator !== undefined &&
             book.frontmatter.translator !== null ? (
-              <h3>{`Translator: ${book.frontmatter.translator}`}</h3>
+              <Subtitle>{`Translator: ${
+                book.frontmatter.translator
+              }`}</Subtitle>
             ) : null}
             <br />
             {book.frontmatter.notes !== undefined &&
             book.frontmatter.notes !== null ? (
-              <h3>{`Notes: ${book.frontmatter.notes}`}</h3>
+              <Subtitle>{`Notes: ${book.frontmatter.notes}`}</Subtitle>
             ) : null}
           </DetailsWrapper>
           <GalleryWrapper>
