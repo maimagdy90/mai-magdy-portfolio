@@ -21,6 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const itemDetails = path.resolve(`src/components/details.js`)
+    const aboutComponent = path.resolve(`src/components/about.js`)
     // Query for markdown nodes to use in creating pages.
     resolve(
       graphql(
@@ -29,7 +30,6 @@ exports.createPages = ({ graphql, actions }) => {
             allMarkdownRemark {
               edges {
                 node {
-                  id
                   frontmatter {
                     path
                   }
@@ -44,7 +44,15 @@ exports.createPages = ({ graphql, actions }) => {
         }
         // Create pages for each markdown file.
         result.data.allMarkdownRemark.edges.forEach(edge => {
-          if (edge.node.frontmatter.path !== '/about')
+          if (edge.node.frontmatter.path === '/about')
+            createPage({
+              path: edge.node.frontmatter.path,
+              component: aboutComponent,
+              // In your blog post template's graphql query, you can use path
+              // as a GraphQL variable to query for data from the markdown file.
+              context: {},
+            })
+          else
             createPage({
               path: edge.node.frontmatter.path,
               component: itemDetails,

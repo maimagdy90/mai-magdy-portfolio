@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from './layout'
 import styled from 'react-emotion'
 
 const ContentWrapper = styled('div')`
@@ -33,12 +33,12 @@ const TitleWrapper = styled('h1')`
 `
 
 const Artwork = ({ data, location }) => {
-  const { allMarkdownRemark: about } = data
+  const { markdownRemark: about } = data
   return (
     <Layout pathname={location.pathname}>
       <ContentWrapper>
-        <TitleWrapper>{about.edges[0].node.frontmatter.title}</TitleWrapper>
-        <div dangerouslySetInnerHTML={{ __html: about.edges[0].node.html }} />
+        <TitleWrapper>{about.frontmatter.title}</TitleWrapper>
+        <div dangerouslySetInnerHTML={{ __html: about.html }} />
       </ContentWrapper>
     </Layout>
   )
@@ -47,16 +47,11 @@ const Artwork = ({ data, location }) => {
 export default Artwork
 
 export const query = graphql`
-  {
-    allMarkdownRemark(filter: { frontmatter: { type: { eq: "about" } } }) {
-      edges {
-        node {
-          id
-          html
-          frontmatter {
-            title
-          }
-        }
+  query AboutMe($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+      html
+      frontmatter {
+        title
       }
     }
   }

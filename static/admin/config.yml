@@ -181,7 +181,7 @@ collections:
 
   - name: 'about' # Used in routes, e.g., /admin/collections/blog
     label: 'About' # Used in the UI
-    folder: 'src/pages/markdown/about' # The path to the folder where the documents are stored
+    folder: 'src/pages/markdown/aboutme' # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string', required: true }
