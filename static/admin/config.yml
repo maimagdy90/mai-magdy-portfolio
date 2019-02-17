@@ -22,6 +22,7 @@ collections:
           name: 'translator',
           widget: 'string',
           required: false,
+          default: '',
         }
       - {
           label: 'Publisher',
@@ -34,6 +35,7 @@ collections:
           name: 'publish_date',
           widget: 'datetime',
           required: false,
+          default: '',
         }
       - { label: 'Cover Image', name: 'cover', widget: 'image', required: true }
       - {
@@ -41,8 +43,15 @@ collections:
           name: 'mockup',
           widget: 'image',
           required: false,
+          default: '',
         }
-      - { label: 'Notes', name: 'notes', widget: 'text', required: false }
+      - {
+          label: 'Notes',
+          name: 'notes',
+          widget: 'text',
+          required: false,
+          default: '',
+        }
       - { label: 'Type', name: 'type', widget: 'hidden', default: 'book' }
       - {
           label: 'Featured',
@@ -58,13 +67,36 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string', required: true }
-      - { label: 'Author', name: 'author', widget: 'hidden' }
-      - { label: 'Translator', name: 'translator', widget: 'hidden' }
-      - { label: 'Publisher', name: 'publisher', widget: 'hidden' }
-      - { label: 'Publish Date', name: 'publish_date', widget: 'hidden' }
+      - {
+          label: 'Author',
+          name: 'author',
+          widget: 'hidden',
+          default: '',
+          required: false,
+        }
+      - {
+          label: 'Translator',
+          name: 'translator',
+          widget: 'hidden',
+          default: '',
+          required: false,
+        }
+      - { label: 'Publisher', name: 'publisher', widget: 'hidden', default: '' }
+      - {
+          label: 'Publish Date',
+          name: 'publish_date',
+          widget: 'hidden',
+          default: '',
+        }
       - { label: 'Cover Image', name: 'cover', widget: 'image', required: true }
-      - { label: 'Mockup Image', name: 'mockup', widget: 'hidden' }
-      - { label: 'Notes', name: 'notes', widget: 'text', required: false }
+      - { label: 'Mockup Image', name: 'mockup', widget: 'hidden', default: '' }
+      - {
+          label: 'Notes',
+          name: 'notes',
+          widget: 'text',
+          required: false,
+          default: '',
+        }
       - { label: 'Type', name: 'type', widget: 'hidden', default: 'work_art' }
       - {
           label: 'Featured',
@@ -80,19 +112,26 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string', required: true }
-      - { label: 'Author', name: 'author', widget: 'hidden' }
-      - { label: 'Translator', name: 'translator', widget: 'hidden' }
+      - { label: 'Author', name: 'author', widget: 'hidden', default: '' }
+      - {
+          label: 'Translator',
+          name: 'translator',
+          widget: 'hidden',
+          default: '',
+        }
       - {
           label: 'Publisher',
           name: 'publisher',
           widget: 'string',
           required: false,
+          default: '',
         }
       - {
           label: 'Publish Date',
           name: 'publish_date',
           widget: 'datetime',
           required: false,
+          default: '',
         }
       - { label: 'Cover Image', name: 'cover', widget: 'image', required: true }
       - {
@@ -100,8 +139,15 @@ collections:
           name: 'mockup',
           widget: 'image',
           required: false,
+          default: '',
         }
-      - { label: 'Notes', name: 'notes', widget: 'text', required: false }
+      - {
+          label: 'Notes',
+          name: 'notes',
+          widget: 'text',
+          required: false,
+          default: '',
+        }
       - { label: 'Type', name: 'type', widget: 'hidden', default: 'campaign' }
       - {
           label: 'Featured',
@@ -117,4 +163,4 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Type', name: 'type', widget: 'hidden', default: 'about' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: true }
