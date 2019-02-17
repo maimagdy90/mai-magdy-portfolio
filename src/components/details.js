@@ -96,9 +96,9 @@ const Details = ({ data, location }) => {
         </DetailsWrapper>
         <GalleryWrapper>
           <ImgWrapper fluid={book.frontmatter.cover.childImageSharp.fluid} />
-          {book.frontmatter.mockup !== undefined &&
-          book.frontmatter.mockup !== '' &&
-          book.frontmatter.mockup !== null ? (
+          {!book.frontmatter.mockup.childImageSharp.fluid.src.includes(
+            '/images/assets/logo.png'
+          ) ? (
             <ImgWrapper fluid={book.frontmatter.mockup.childImageSharp.fluid} />
           ) : null}
         </GalleryWrapper>

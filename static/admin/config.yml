@@ -43,7 +43,7 @@ collections:
           name: 'mockup',
           widget: 'image',
           required: false,
-          default: '',
+          default: '/images/assets/logo.png',
         }
       - {
           label: 'Notes',
@@ -89,7 +89,12 @@ collections:
           default: '',
         }
       - { label: 'Cover Image', name: 'cover', widget: 'image', required: true }
-      - { label: 'Mockup Image', name: 'mockup', widget: 'hidden', default: '' }
+      - {
+          label: 'Mockup Image',
+          name: 'mockup',
+          widget: 'hidden',
+          default: '/images/assets/logo.png',
+        }
       - {
           label: 'Notes',
           name: 'notes',
@@ -139,7 +144,7 @@ collections:
           name: 'mockup',
           widget: 'image',
           required: false,
-          default: '',
+          default: '/images/assets/logo.png',
         }
       - {
           label: 'Notes',
