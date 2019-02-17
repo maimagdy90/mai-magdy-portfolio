@@ -43,7 +43,7 @@ collections:
           name: 'mockup',
           widget: 'image',
           required: false,
-          default: '../images/assets/logo.png',
+          default: '/images/assets/logo.png',
         }
       - {
           label: 'Notes',
@@ -93,7 +93,7 @@ collections:
           label: 'Mockup Image',
           name: 'mockup',
           widget: 'hidden',
-          default: '../images/assets/logo.png',
+          default: '/images/assets/logo.png',
         }
       - {
           label: 'Notes',
@@ -144,7 +144,7 @@ collections:
           name: 'mockup',
           widget: 'image',
           required: false,
-          default: '../images/assets/logo.png',
+          default: '/images/assets/logo.png',
         }
       - {
           label: 'Notes',
