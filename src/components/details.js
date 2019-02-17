@@ -50,7 +50,14 @@ const Subtitle = styled('h3')`
 
 const Details = ({ data, location }) => {
   const { markdownRemark: book } = data
-
+  console.log('====================================')
+  console.log(book)
+  console.log(
+    !book.frontmatter.mockup.childImageSharp.fluid.src.includes(
+      '/images/assets/logo.png'
+    )
+  )
+  console.log('====================================')
   return (
     <Layout pathname={location.pathname}>
       <MainWrapper>
