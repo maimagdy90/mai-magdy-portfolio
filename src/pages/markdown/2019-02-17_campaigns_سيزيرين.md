@@ -6,7 +6,7 @@ translator: ''
 publisher: ''
 publish_date: ''
 cover: /images/caesarean.jpg
-mockup: /images/assets/logo.png
+mockup: /images/964732_570310716351381_1860580504_o.jpg
 notes: ''
 type: campaign
 featured: true
