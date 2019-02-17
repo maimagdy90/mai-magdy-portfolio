@@ -50,14 +50,7 @@ const Subtitle = styled('h3')`
 
 const Details = ({ data, location }) => {
   const { markdownRemark: book } = data
-  console.log('====================================')
-  console.log(book)
-  console.log(
-    !book.frontmatter.mockup.childImageSharp.fluid.src.includes(
-      '/images/assets/logo.png'
-    )
-  )
-  console.log('====================================')
+
   return (
     <Layout pathname={location.pathname}>
       <MainWrapper>
@@ -104,7 +97,7 @@ const Details = ({ data, location }) => {
         <GalleryWrapper>
           <ImgWrapper fluid={book.frontmatter.cover.childImageSharp.fluid} />
           {!book.frontmatter.mockup.childImageSharp.fluid.src.includes(
-            '/images/assets/logo.png'
+            'logo.png'
           ) ? (
             <ImgWrapper fluid={book.frontmatter.mockup.childImageSharp.fluid} />
           ) : null}

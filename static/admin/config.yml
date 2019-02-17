@@ -15,6 +15,12 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: '{{year}}-{{month}}-{{day}}_books_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
+      - {
+          label: 'Path',
+          name: 'path',
+          widget: 'hidden',
+          default: '/book/{{title}}',
+        }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Author', name: 'author', widget: 'string', required: true }
       - {
@@ -66,6 +72,12 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: '{{year}}-{{month}}-{{day}}_artwork_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
+      - {
+          label: 'Path',
+          name: 'path',
+          widget: 'hidden',
+          default: '/artworks/{{title}}',
+        }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - {
           label: 'Author',
@@ -116,6 +128,12 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: '{{year}}-{{month}}-{{day}}_campaigns_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
+      - {
+          label: 'Path',
+          name: 'path',
+          widget: 'hidden',
+          default: '/campaign/{{title}}',
+        }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Author', name: 'author', widget: 'hidden', default: '' }
       - {
