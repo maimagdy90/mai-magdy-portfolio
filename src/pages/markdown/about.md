@@ -1,4 +1,5 @@
 ---
+path: '/about'
 title: 'About Me'
 type: 'about'
 ---

@@ -11,9 +11,9 @@ public_folder: '/images'
 collections:
   - name: 'books' # Used in routes, e.g., /admin/collections/blog
     label: 'Books' # Used in the UI
-    folder: 'src/pages/markdown/books' # The path to the folder where the documents are stored
+    folder: 'src/pages/markdown' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{month}}-{{day}}_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{year}}-{{month}}-{{day}}_books_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Author', name: 'author', widget: 'string', required: true }
@@ -43,7 +43,7 @@ collections:
           name: 'mockup',
           widget: 'image',
           required: false,
-          default: '/images/assets/logo.png',
+          default: '',
         }
       - {
           label: 'Notes',
@@ -62,9 +62,9 @@ collections:
 
   - name: 'artworks' # Used in routes, e.g., /admin/collections/blog
     label: 'Artworks' # Used in the UI
-    folder: 'src/pages/markdown/artwork' # The path to the folder where the documents are stored
+    folder: 'src/pages/markdown' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{month}}-{{day}}_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{year}}-{{month}}-{{day}}_artwork_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - {
@@ -89,12 +89,7 @@ collections:
           default: '',
         }
       - { label: 'Cover Image', name: 'cover', widget: 'image', required: true }
-      - {
-          label: 'Mockup Image',
-          name: 'mockup',
-          widget: 'hidden',
-          default: '/images/assets/logo.png',
-        }
+      - { label: 'Mockup Image', name: 'mockup', widget: 'hidden', default: '' }
       - {
           label: 'Notes',
           name: 'notes',
@@ -112,9 +107,9 @@ collections:
 
   - name: 'campaign' # Used in routes, e.g., /admin/collections/blog
     label: 'Campaigns' # Used in the UI
-    folder: 'src/pages/markdown/campaigns' # The path to the folder where the documents are stored
+    folder: 'src/pages/markdown' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{month}}-{{day}}_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{year}}-{{month}}-{{day}}_campaigns_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Author', name: 'author', widget: 'hidden', default: '' }
@@ -144,7 +139,7 @@ collections:
           name: 'mockup',
           widget: 'image',
           required: false,
-          default: '/images/assets/logo.png',
+          default: '',
         }
       - {
           label: 'Notes',
@@ -163,7 +158,7 @@ collections:
 
   - name: 'about' # Used in routes, e.g., /admin/collections/blog
     label: 'About' # Used in the UI
-    folder: 'src/pages/markdown/about' # The path to the folder where the documents are stored
+    folder: 'src/pages/markdown' # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string', required: true }

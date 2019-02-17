@@ -84,13 +84,7 @@ const Books = ({ data, location }) => {
       <ContentWrapper>
         {covers
           ? covers.edges.map(item => (
-              <LinkWrapper
-                key={item.node.id}
-                to="/details"
-                state={{
-                  item: item.node,
-                }}
-              >
+              <LinkWrapper key={item.node.id} to={item.node.frontmatter.path}>
                 <div
                   className="blur-image"
                   style={{
@@ -133,25 +127,9 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            title
-            author
-            translator
-            publisher
-            publish_date
-            notes
-            featured
+            path
             type
             cover {
-              childImageSharp {
-                fluid(maxWidth: 700) {
-                  srcSet
-                  sizes
-                  aspectRatio
-                  src
-                }
-              }
-            }
-            mockup {
               childImageSharp {
                 fluid(maxWidth: 700) {
                   srcSet
