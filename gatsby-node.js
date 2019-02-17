@@ -29,6 +29,7 @@ exports.createPages = ({ graphql, actions }) => {
             allMarkdownRemark {
               edges {
                 node {
+                  id
                   frontmatter {
                     path
                   }
@@ -42,10 +43,10 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
         // Create pages for each markdown file.
-        result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-          if (node.frontmatter.path !== '/about')
+        result.data.allMarkdownRemark.edges.forEach(edge => {
+          if (edge.node.frontmatter.path !== '/about')
             createPage({
-              path: node.frontmatter.path,
+              path: edge.node.frontmatter.path,
               component: itemDetails,
               // In your blog post template's graphql query, you can use path
               // as a GraphQL variable to query for data from the markdown file.
