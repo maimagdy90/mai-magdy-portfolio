@@ -19,8 +19,9 @@ collections:
       - {
           label: 'Path',
           name: 'path',
-          widget: 'hidden',
-          default: '/book/{{title}}',
+          widget: 'string',
+          default: '/book/',
+          required: true,
         }
       - { label: 'Author', name: 'author', widget: 'string', required: true }
       - {
@@ -104,8 +105,9 @@ collections:
       - {
           label: 'Path',
           name: 'path',
-          widget: 'hidden',
-          default: '/artworks/{{title}}',
+          widget: 'string',
+          default: '/artworks/',
+          required: true,
         }
       - {
           label: 'Author',
@@ -160,8 +162,9 @@ collections:
       - {
           label: 'Path',
           name: 'path',
-          widget: 'hidden',
-          default: '/campaign/{{title}}',
+          widget: 'string',
+          default: '/campaign/',
+          required: true,
         }
       - { label: 'Author', name: 'author', widget: 'hidden', default: '' }
       - {
