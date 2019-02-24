@@ -13,13 +13,13 @@ collections:
     label: 'Books' # Used in the UI
     folder: 'src/pages/markdown/books' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{month}}-{{day}}_books_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{year}}-{{month}}_books_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {
           label: 'Path',
           name: 'path',
           widget: 'hidden',
-          default: '/book/{{title}}',
+          default: '/book/{{slug}}',
         }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Author', name: 'author', widget: 'string', required: true }
@@ -70,13 +70,13 @@ collections:
     label: 'Artworks' # Used in the UI
     folder: 'src/pages/markdown/artworks' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{month}}-{{day}}_artwork_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{year}}-{{month}}_artwork_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {
           label: 'Path',
           name: 'path',
           widget: 'hidden',
-          default: '/artworks/{{title}}',
+          default: '/artworks/{{slug}}',
         }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - {
@@ -126,13 +126,13 @@ collections:
     label: 'Campaigns' # Used in the UI
     folder: 'src/pages/markdown/campaigns' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{month}}-{{day}}_campaigns_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{year}}-{{month}}_campaigns_{{title}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {
           label: 'Path',
           name: 'path',
           widget: 'hidden',
-          default: '/campaign/{{title}}',
+          default: '/campaign/{{slug}}',
         }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - { label: 'Author', name: 'author', widget: 'hidden', default: '' }
