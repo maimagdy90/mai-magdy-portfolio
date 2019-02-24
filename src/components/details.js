@@ -101,6 +101,34 @@ const Details = ({ data, location }) => {
           ) ? (
             <ImgWrapper fluid={book.frontmatter.mockup.childImageSharp.fluid} />
           ) : null}
+          {!book.frontmatter.mockup1.childImageSharp.fluid.src.includes(
+            'logo.png'
+          ) ? (
+            <ImgWrapper
+              fluid={book.frontmatter.mockup1.childImageSharp.fluid}
+            />
+          ) : null}
+          {!book.frontmatter.mockup2.childImageSharp.fluid.src.includes(
+            'logo.png'
+          ) ? (
+            <ImgWrapper
+              fluid={book.frontmatter.mockup2.childImageSharp.fluid}
+            />
+          ) : null}
+          {!book.frontmatter.mockup3.childImageSharp.fluid.src.includes(
+            'logo.png'
+          ) ? (
+            <ImgWrapper
+              fluid={book.frontmatter.mockup3.childImageSharp.fluid}
+            />
+          ) : null}
+          {!book.frontmatter.mockup4.childImageSharp.fluid.src.includes(
+            'logo.png'
+          ) ? (
+            <ImgWrapper
+              fluid={book.frontmatter.mockup4.childImageSharp.fluid}
+            />
+          ) : null}
         </GalleryWrapper>
       </MainWrapper>
     </Layout>
@@ -133,6 +161,46 @@ export const postQuery = graphql`
           }
         }
         mockup {
+          childImageSharp {
+            fluid(maxWidth: 700) {
+              srcSet
+              sizes
+              aspectRatio
+              src
+            }
+          }
+        }
+        mockup1 {
+          childImageSharp {
+            fluid(maxWidth: 700) {
+              srcSet
+              sizes
+              aspectRatio
+              src
+            }
+          }
+        }
+        mockup2 {
+          childImageSharp {
+            fluid(maxWidth: 700) {
+              srcSet
+              sizes
+              aspectRatio
+              src
+            }
+          }
+        }
+        mockup3 {
+          childImageSharp {
+            fluid(maxWidth: 700) {
+              srcSet
+              sizes
+              aspectRatio
+              src
+            }
+          }
+        }
+        mockup4 {
           childImageSharp {
             fluid(maxWidth: 700) {
               srcSet

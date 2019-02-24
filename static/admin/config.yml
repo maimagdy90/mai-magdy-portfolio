@@ -52,6 +52,34 @@ collections:
           default: '/images/assets/logo.png',
         }
       - {
+          label: 'Mockup Image 1',
+          name: 'mockup1',
+          widget: 'image',
+          required: false,
+          default: '/images/assets/logo.png',
+        }
+      - {
+          label: 'Mockup Image 2',
+          name: 'mockup2',
+          widget: 'image',
+          required: false,
+          default: '/images/assets/logo.png',
+        }
+      - {
+          label: 'Mockup Image 3',
+          name: 'mockup3',
+          widget: 'image',
+          required: false,
+          default: '/images/assets/logo.png',
+        }
+      - {
+          label: 'Mockup Image 4',
+          name: 'mockup4',
+          widget: 'image',
+          required: false,
+          default: '/images/assets/logo.png',
+        }
+      - {
           label: 'Notes',
           name: 'notes',
           widget: 'text',
@@ -160,6 +188,34 @@ collections:
       - {
           label: 'Mockup Image',
           name: 'mockup',
+          widget: 'image',
+          required: false,
+          default: '/images/assets/logo.png',
+        }
+      - {
+          label: 'Mockup Image 1',
+          name: 'mockup-1',
+          widget: 'image',
+          required: false,
+          default: '/images/assets/logo.png',
+        }
+      - {
+          label: 'Mockup Image 2',
+          name: 'mockup2',
+          widget: 'image',
+          required: false,
+          default: '/images/assets/logo.png',
+        }
+      - {
+          label: 'Mockup Image 3',
+          name: 'mockup3',
+          widget: 'image',
+          required: false,
+          default: '/images/assets/logo.png',
+        }
+      - {
+          label: 'Mockup Image 4',
+          name: 'mockup4',
           widget: 'image',
           required: false,
           default: '/images/assets/logo.png',
