@@ -1,6 +1,6 @@
 ---
 title: جميل واسمر
-path: /artworks/جميل واسمر
+path: /artworks/gamel
 author: ''
 translator: ''
 publisher: ''
