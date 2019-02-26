@@ -35,13 +35,15 @@ const ImgWrapper = styled(Img)`
 
 const Title = styled('h1')`
   font-size: 4rem;
+  margin-bottom: 3rem;
   @media (max-width: 767px) {
     font-size: 2rem;
-    margin-bottom: 2vh;
+    margin-bottom: 1rem;
   }
 `
 
 const Subtitle = styled('h3')`
+  margin-bottom: 20px;
   @media (max-width: 767px) {
     font-size: 1rem;
     margin-bottom: 5px;
@@ -56,19 +58,19 @@ const Details = ({ data, location }) => {
       <MainWrapper>
         <DetailsWrapper>
           <Title>{book.frontmatter.title}</Title>
-          <br />
+
           {book.frontmatter.author !== undefined &&
           book.frontmatter.author !== '' &&
           book.frontmatter.author !== null ? (
             <Subtitle>{book.frontmatter.author}</Subtitle>
           ) : null}
-          <br />
+
           {book.frontmatter.publisher !== undefined &&
           book.frontmatter.publisher !== '' &&
           book.frontmatter.publisher !== null ? (
             <Subtitle>{`Publisher: ${book.frontmatter.publisher}`}</Subtitle>
           ) : null}
-          <br />
+
           {book.frontmatter.publish_date !== undefined &&
           book.frontmatter.publish_date !== null &&
           book.frontmatter.publish_date !== '' ? (
@@ -81,13 +83,13 @@ const Details = ({ data, location }) => {
               `}
             </Subtitle>
           ) : null}
-          <br />
+
           {book.frontmatter.translator !== undefined &&
           book.frontmatter.translator !== '' &&
           book.frontmatter.translator !== null ? (
             <Subtitle>{`Translator: ${book.frontmatter.translator}`}</Subtitle>
           ) : null}
-          <br />
+
           {book.frontmatter.notes !== undefined &&
           book.frontmatter.notes !== '' &&
           book.frontmatter.notes !== null ? (
