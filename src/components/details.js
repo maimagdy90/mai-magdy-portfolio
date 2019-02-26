@@ -38,15 +38,15 @@ const Title = styled('h1')`
   margin-bottom: 3rem;
   @media (max-width: 767px) {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 `
 
 const Subtitle = styled('h3')`
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   @media (max-width: 767px) {
     font-size: 1rem;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
   }
 `
 
