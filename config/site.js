@@ -4,8 +4,8 @@ module.exports = {
   titleAlt: 'Mai Magdy Portfolio', // Title for JSONLD
   description:
     'Mai Magdy Portfolio for designs of books, campaigns, and artworks',
-  url: 'https://gatsby-tutorial-starter.netlify.com', // Domain of your site. No trailing slash!
-  siteUrl: 'https://gatsby-tutorial-starter.netlify.com', // url + pathPrefix
+  url: 'https://maimagdy.me', // Domain of your site. No trailing slash!
+  siteUrl: 'https://maimagdy.me', // url + pathPrefix
   siteLanguage: 'en', // Language Tag on <html> element
   logo: 'static/logo/logo.png', // Used for SEO
   banner: 'static/logo/logo.png',
