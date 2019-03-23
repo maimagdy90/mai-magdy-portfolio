@@ -5,7 +5,7 @@ author: ''
 translator: ''
 publisher: معهد المئوية النسائى للتدريب / المملكه العربية السعودية
 publish_date: ''
-cover: /images/2.jpg
+cover: /images/ready.jpg
 mockup: ''
 mockup1: ''
 mockup2: ''
