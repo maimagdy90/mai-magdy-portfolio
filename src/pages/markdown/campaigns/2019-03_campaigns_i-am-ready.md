@@ -1,6 +1,6 @@
 ---
 title: I am ready
-path: /campaign/I am ready
+path: /campaign/I-am-ready
 author: ''
 translator: ''
 publisher: معهد المئوية النسائى للتدريب / المملكه العربية السعودية
