@@ -1,6 +1,6 @@
 ---
 title: office
-path: /campaign/
+path: /campaign/office2
 author: ''
 translator: ''
 publisher: ''
@@ -15,4 +15,3 @@ notes: ''
 type: campaign
 featured: true
 ---
-
