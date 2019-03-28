@@ -6,9 +6,9 @@ translator: ''
 publisher: ''
 publish_date: ''
 cover: /images/مستطيل.jpg
-mockup: /images/assets/logo.png
-mockup1: /images/assets/logo.png
-mockup2: /images/assets/logo.png
+mockup: /images/1.jpg
+mockup1: /images/مربع.jpg
+mockup2: /images/الغلاف.jpg
 mockup3: /images/assets/logo.png
 mockup4: /images/assets/logo.png
 notes: ''
