@@ -5,7 +5,7 @@ author: ''
 translator: ''
 publisher: ''
 publish_date: ''
-cover: /images/9.jpg
+cover: /images/09.jpg
 mockup: /images/assets/logo.png
 mockup1: /images/assets/logo.png
 mockup2: /images/assets/logo.png
